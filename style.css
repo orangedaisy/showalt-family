@@ -1,0 +1,113 @@
+html {
+  background-attachment: fixed;
+  background-color: #EDF2F7;
+  background-image: url('background.jpg');
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-sizing: border-box;
+  font-family: 'Sorts Mill Goudy', serif;
+  font-size: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #2D3748;
+  padding: 1em;
+}
+
+main {
+  margin-top: 0;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  max-width: 65ch;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    margin-top: 2em;
+    margin-right: 12vw;
+    margin-bottom: 2em;
+  }
+}
+
+header {
+  text-align: center;
+}
+
+header img {
+  border: 1ch solid #fff;
+  box-shadow: 0 2px 4px #A0AEC0;
+  display: block;
+  max-width: 100%;
+}
+
+header h1 {
+  color: #C53030;
+  font-family: 'Yellowtail', cursive;
+  font-size: 2.25em;
+  font-weight: 400;
+  line-height: 1.063;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 48rem) {
+  header h1 {
+    font-size: 3.375em;
+    margin-top: 5.063rem;
+  }
+}
+
+header h2 {
+  color: #2F855A;
+  font-family: 'Sacramento', cursive;
+  font-size: 1.75em;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-top: .125em;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 48rem) {
+  header h2 {
+    font-size: 2.25em;
+    margin-bottom: 5.063rem;
+  }
+}
+
+article {
+  line-height: 1.8;
+}
+
+article > *:first-child {
+  margin-top: 0;
+}
+
+article > *:last-child {
+  margin-bottom: 0;
+}
+
+article .family-names {
+  display: block;
+  font-family: 'Sacramento', cursive;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+footer {
+  color: #A0AEC0;
+  margin: 5.063rem auto;
+  text-align: center;
+}
