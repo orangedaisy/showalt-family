@@ -2,12 +2,18 @@ html {
   background-attachment: fixed;
   background-color: #EDF2F7;
   background-image: url('background.jpg');
-  background-position: top right;
+  background-position: center right;
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
   font-family: 'Sorts Mill Goudy', serif;
   font-size: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    background-position: center 10%;
+  }
 }
 
 *,
@@ -34,11 +40,24 @@ main {
   max-width: 65ch;
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 768px) {
+  main {
+    margin-left: 15vw;
+  }
+}
+
+@media screen and (min-width: 960px) {
   main {
     margin-top: 2em;
-    margin-right: 12vw;
+    margin-right: 6vw;
     margin-bottom: 2em;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  main {
+    margin-right: 12vw;
   }
 }
 
