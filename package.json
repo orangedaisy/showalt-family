@@ -1,0 +1,22 @@
+{
+  "name": "showalt-family",
+  "version": "1.0.0",
+  "description": "Showalter Family site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orangedaisy/showalt-family.git"
+  },
+  "author": "Bobby Showalter",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/orangedaisy/showalt-family/issues"
+  },
+  "homepage": "https://github.com/orangedaisy/showalt-family#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.10.0"
+  }
+}
