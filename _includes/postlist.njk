@@ -1,0 +1,14 @@
+<ol reversed>
+  {% for post in collections.post | reverse %}
+    <li>
+      <article>
+        <header>
+          <h3>{{ post.date | readableDate }}</h3>
+        </header>
+        <div>
+          {{ post.templateContent | safe }}
+        </div>
+      </article>
+    </li>
+  {% endfor %}
+</ol>
