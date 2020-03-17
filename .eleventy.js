@@ -9,6 +9,13 @@ module.exports = function(eleventyConfig) {
         return dateFormat(dateObj, "fullDate");
     });
 
+    // configure markdown compiling
+    let markdownIt = require("markdown-it");
+    let options = {
+        typographer: true
+    };
+    eleventyConfig.setLibrary("md", markdownIt(options));
+
     return {
         markdownTemplateEngine: "njk"
     };

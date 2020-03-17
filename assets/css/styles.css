@@ -91,10 +91,6 @@ main {
 }
 
 /* Journal entry styles */
-article > * + * {
-  margin-top: 1em;
-}
-
 article > header + * {
   margin-top: .5em;
 }
@@ -107,4 +103,8 @@ article > div {
   background-color: var(--c-background-container);
   border-radius: 4px;
   padding: 1em;
+}
+
+article > div > * + * {
+  margin-top: 1em;
 }
