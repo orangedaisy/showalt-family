@@ -4,6 +4,8 @@ backend:
 
 display_url: https://www.showalter.family
 
+media_folder: "assets/images"
+
 collections:
   - name: "journal"
     label: "Journal"
