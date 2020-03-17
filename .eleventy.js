@@ -2,6 +2,7 @@ const dateFormat = require('dateformat');
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPassthroughCopy("admin");
     eleventyConfig.setDataDeepMerge(true);
 
     // convert dates to readable format

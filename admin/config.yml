@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: master
+
+display_url: https://www.showalter.family
+
+collections:
+  - name: "journal"
+    label: "Journal"
+    folder: "posts"
+    create: true
+    slug: "{{month}}-{{day}}-{{year}}.md"
+    fields:
+      - {label: "Body", name: "body", widget: "markdown", required: true}
