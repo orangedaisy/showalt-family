@@ -11,7 +11,7 @@ collections:
     label: "Journal"
     folder: "posts"
     create: true
-    slug: "{{month}}-{{day}}-{{year}}.md"
+    slug: "{{month}}-{{day}}-{{year}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", default: "{{slug}}" hidden: true}
+      - {label: "Title", name: "title", widget: "string", default: "{{slug}}", hidden: true}
       - {label: "Body", name: "body", widget: "markdown", required: true}
