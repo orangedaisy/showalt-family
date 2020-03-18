@@ -13,5 +13,6 @@ collections:
     create: true
     slug: "{{month}}-{{day}}-{{year}}"
     fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
+      - {label: "Title", name: "title", widget: "hidden", default: "{{fields.date}}"}
       - {label: "Body", name: "body", widget: "markdown", required: true}
