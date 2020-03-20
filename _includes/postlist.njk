@@ -1,9 +1,10 @@
 <ol reversed>
   {% for post in collections.post | reverse %}
+    {%- set date = post.date | readableDate -%}
     <li>
-      <article>
+      <article id="{{ date | slug }}">
         <header>
-          <h3>{{ post.date | readableDate }}</h3>
+          <h3><a href="#{{ date | slug }}">{{ date }}</a></h3>
         </header>
         <div>
           {{ post.templateContent | safe }}
