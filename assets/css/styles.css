@@ -204,3 +204,10 @@ article > div {
 article > div > * + * {
   margin-top: 1em;
 }
+
+ol + p {
+  font-style: italic;
+  margin: 2.25em 0;
+  opacity: .75;
+  text-align: center;
+}
