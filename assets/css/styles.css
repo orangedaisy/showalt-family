@@ -205,9 +205,12 @@ article > div > * + * {
   margin-top: 1em;
 }
 
-ol + p {
-  font-style: italic;
+footer {
   margin: 2.25em 0;
-  opacity: .75;
+  opacity: .85;
   text-align: center;
+}
+
+footer > * + * {
+  margin-top: 1em;
 }

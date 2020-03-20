@@ -12,12 +12,19 @@
     <h1>Showalter Family COVID-19 Journal</h1>
 
     {% include "postlist.njk" %}
-
+  </main>
+  <footer>
     <p>
       You've reached the beginning.
       <a href="#journal">Scroll back to the top &uarr;</a>
     </p>
-  </main>
+
+    <p>
+      <a href="https://www.bshow.co/">Bobby's Blog &nearr;</a>
+      &bull;
+      <a href="https://www.github.com/orangedaisy/showalt-family/">GitHub &nearr;</a>
+    </p>
+  </footer>
   <script>
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on("init", user => {
