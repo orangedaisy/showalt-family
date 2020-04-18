@@ -1,4 +1,8 @@
 const dateFormat = require('dateformat');
+const markdownIt = require("markdown-it");
+const markdownOptions = {
+    typographer: true
+};
 
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets");
@@ -10,12 +14,14 @@ module.exports = function(eleventyConfig) {
         return dateFormat(dateObj, "fullDate");
     });
 
+    // markdown filter since 11ty doesn't have one for some reason
+    eleventyConfig.addFilter("markdownify", content => {
+        let markdown = new markdownIt(markdownOptions);
+        return markdown.render(content);
+    });
+
     // configure markdown compiling
-    let markdownIt = require("markdown-it");
-    let options = {
-        typographer: true
-    };
-    eleventyConfig.setLibrary("md", markdownIt(options));
+    eleventyConfig.setLibrary("md", markdownIt(markdownOptions));
 
     return {
         markdownTemplateEngine: "njk"
