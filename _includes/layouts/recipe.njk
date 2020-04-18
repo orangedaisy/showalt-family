@@ -27,10 +27,10 @@
   <hr>
 
   <h2>Method</h2>
-  <div>{{ method | safe }}</div>
+  <div>{{ method | markdownify | safe }}</div>
   <hr>
 
   <h2>Source</h2>
-  <div>{{ source | safe }}</div>
+  <div>{{ source | markdownify | safe }}</div>
 </body>
 </html>
