@@ -1,4 +1,5 @@
 ---
+layout: layouts/recipe.njk
 title: Ye Olde Mac n cheese
 tags:
   - cheese

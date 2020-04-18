@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>
+    {% if recipe.title %}
+      {{ recipe.title }} | 
+    {% endif %}
+    Showalter Recipes
+  </title>
+</head>
+<body>
+  <h1>{{ recipe.title }}</h1>
+
+  <h2>Tags</h2>
+  <ul>
+  {% for tag in recipe.tags %}
+    <li>{{ tag }}</li>
+  {% endfor %}
+  </ul>
+  <hr>
+
+  <h2>Ingredients</h2>
+  <ul>
+  {% for ingredient in recipe.ingredients %}
+    <li>{{ ingredient }}</li>
+  {% endfor %}
+  </ul>
+  <hr>
+
+  <h2>Method</h2>
+  <div>{{ recipe.method | safe }}</div>
+  <hr>
+
+  <h2>Source</h2>
+  <div>{{ recipe.source | safe }}</div>
+</body>
+</html>
