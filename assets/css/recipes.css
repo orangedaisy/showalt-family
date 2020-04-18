@@ -1,3 +1,14 @@
+/* vars */
+:root {
+  --dark: #30475e;
+  --primary: #3fc1c9;
+  --accent: #fc5185;
+  --white: #ececec;
+  --block-border: .5rem solid var(--dark);
+  --block-padding: clamp(1rem, 5vw, 3.5rem) 5vw clamp(3rem, 5vw, 5rem);
+}
+
+/* https://hankchizljaw.com/wrote/a-modern-css-reset/ */
 /* Box sizing rules */
 *,
 *::before,
@@ -21,6 +32,7 @@ dd {
 
 /* Set core root defaults */
 html {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -34,25 +46,155 @@ body {
 /* List styles */
 ul,
 ol {
-  list-style: none;
-  margin: 0;
+  margin: 0 0 0 1rem;
   padding: 0;
 }
 
-/* A elements that don't have a class get default styles */
-a:not([class]) {
+/* Anchor styles */
+a {
+  color: inherit;
   text-decoration-skip-ink: auto;
+  transition:
+    color 200ms ease-out,
+    opacity 200ms ease-out;
 }
 
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
+a:hover,
+a:focus {
+  opacity: .75;
+}
+
+a:active {
+  color: var(--primary);
+  opacity: 1;
+}
+
+a:visited {
+  opacity: .75;
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
   * {
     scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
+/* My recipe styles */
+html {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+body {
+  display: grid;
+  grid-template-columns:
+    [back-start] 5vw
+      [header-start] 5vw
+        [body-start] 1fr
+          [back-end] 5vw
+            [header-end] 5vw [body-end];
+  grid-template-rows:
+    [back-start] min-content
+    [header-start] 3rem
+    [back-end] min-content
+    [body-start] 3rem
+    [header-end] 1fr;
+}
+
+h1,
+h2 {
+  line-height: 1.125;
+  margin-bottom: .25em;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  font-weight: 900;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+}
+
+nav {
+  grid-area: back-start / back-start / back-end / back-end;
+  background-color: var(--dark);
+  border-right: var(--block-border);
+  border-bottom: var(--block-border);
+  z-index: 1;
+}
+
+nav a {
+  color: var(--white);
+  display: inline-block;
+  padding: var(--block-padding);
+  transition:
+    background-color 200ms ease-out;
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, .1);
+}
+
+nav a svg {
+  height: clamp(1.5rem, 5vw, 2.5rem);
+  stroke-width: 3;
+  transition: transform 200ms ease-out;
+  width: clamp(1.5rem, 5vh, 2.5rem);
+}
+
+nav a:hover svg {
+  transform: scale(1.125);
+}
+
+article {
+  display: contents;
+}
+
+header {
+  background-color: var(--accent);
+  border: var(--block-border);
+  grid-area: header-start / header-start / header-end / header-end;
+  padding: var(--block-padding);
+  z-index: 2;
+}
+
+header > ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: -.5rem;
+}
+
+header > ul > li {
+  background-color: var(--dark);
+  border-radius: .5rem;
+  color: var(--white);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+  line-height: 1;
+  margin: .5rem;
+  padding: .5em 1em;
+  white-space: nowrap;
+}
+
+div {
+  background-color: white;
+  border-top: var(--block-border);
+  border-left: var(--block-border);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  grid-area: body-start / body-start / -1 / body-end;
+  padding: var(--block-padding);
+  z-index: 3;
+}
+
+div > * + * {
+  margin-top: 2em;
+}
+
+div ol > li + li,
+div ul > li + li {
+  margin-top: .5em;
+}

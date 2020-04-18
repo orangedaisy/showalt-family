@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>
     {{ title }} | Showalter Recipes
   </title>
@@ -24,24 +25,26 @@
       </ul>
     </header>
 
-    <section>
-      <h2>Ingredients</h2>
-      <ul>
-      {%- for ingredient in ingredients -%}
-        <li>{{ ingredient }}</li>
-      {%- endfor -%}
-      </ul>
-    </section>
+    <div>
+      <section>
+        <h2>Ingredients</h2>
+        <ul>
+        {%- for ingredient in ingredients -%}
+          <li>{{ ingredient }}</li>
+        {%- endfor -%}
+        </ul>
+      </section>
 
-    <section>
-      <h2>Method</h2>
-      {{ method | markdownify | safe }}
-    </section>
+      <section>
+        <h2>Method</h2>
+        {{ method | markdownify | safe }}
+      </section>
 
-    <section>
-      <h2>Source</h2>
-      {{ source | markdownify | safe }}
-    </section>
+      <section>
+        <h2>Source</h2>
+        {{ source | markdownify | safe }}
+      </section>
+    </div>
   </article>
 
 </body>
