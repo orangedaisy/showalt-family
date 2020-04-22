@@ -40,10 +40,12 @@
         {{ method | markdownify | safe }}
       </section>
 
-      <section>
-        <h2>Source</h2>
-        {{ source | markdownify | safe }}
-      </section>
+      {%- if source -%}
+        <section>
+          <h2>Source</h2>
+          {{ source | markdownify | safe }}
+        </section>
+      {%- endif -%}
     </div>
   </article>
 
