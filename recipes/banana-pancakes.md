@@ -7,7 +7,7 @@ tags:
   - Banana
 ingredients:
   - 2 ripe bananas
-  - "1/2 cup peanut butter "
+  - 1/2 cup peanut butter
   - 1/2 cup oats
   - 1 egg
   - 1 tsp vanilla
