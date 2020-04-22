@@ -6,7 +6,7 @@
   --accent: #fc5185;
   --white: #ececec;
   --block-border: .5rem solid var(--dark);
-  --block-padding: clamp(1rem, 5vw, 3.5rem) 5vw clamp(3rem, 5vw, 5rem);
+  --block-padding: clamp(1.5rem, 5vw, 3.5rem) 5vw clamp(4rem, 5vw, 5rem);
 }
 
 /* https://hankchizljaw.com/wrote/a-modern-css-reset/ */
@@ -47,7 +47,7 @@ body {
 /* List styles */
 ul,
 ol {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 1em;
   padding: 0;
 }
 
@@ -84,6 +84,7 @@ a:visited {
 
 /* My recipe styles */
 html {
+  background-attachment: fixed;
   background-color: var(--primary);
   background-image:
     repeating-linear-gradient(
@@ -101,11 +102,14 @@ html {
       var(--dark-opacity) 4.25rem
     ),
     linear-gradient(
-      135deg,
+      to bottom,
       var(--primary),
       var(--white),
       var(--accent)
     );
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--dark);
 }
 
@@ -125,6 +129,12 @@ body {
     [header-end] 1fr;
 }
 
+body > nav,
+article > header {
+  position: sticky;
+  top: 0;
+}
+
 h1,
 h2 {
   line-height: 1.125;
@@ -134,6 +144,7 @@ h2 {
 h1 {
   font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 900;
+  text-shadow: .05em .05em 0 var(--primary);
 }
 
 h2 {
@@ -152,19 +163,20 @@ nav a {
   color: var(--white);
   display: inline-block;
   padding: var(--block-padding);
-  transition:
-    background-color 200ms ease-out;
+  transition: background-color 200ms ease-out;
 }
 
 nav a:hover {
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(200, 200, 200, .05);
+  /* we don't want the "back" link to transition its opacity */
+  opacity: 1;
 }
 
 nav a svg {
   height: clamp(1.5rem, 5vw, 2.5rem);
   stroke-width: 3;
   transition: transform 200ms ease-out;
-  width: clamp(1.5rem, 5vh, 2.5rem);
+  width: clamp(1.5rem, 5vw, 2.5rem);
 }
 
 nav a:hover svg {
@@ -192,6 +204,7 @@ header > ul {
 
 header > ul > li {
   background-color: var(--dark);
+  box-shadow: .25rem .25rem 0 var(--primary);
   border-radius: .5rem;
   color: var(--white);
   font-size: clamp(1rem, 2vw, 1.25rem);
@@ -216,7 +229,16 @@ div > * + * {
   margin-top: 2em;
 }
 
-div ol > li + li,
-div ul > li + li {
-  margin-top: .5em;
+section {
+  max-width: 60ch;
+}
+
+section ol > li,
+section ul > li {
+  line-height: 1.6;
+}
+
+section ol > li + li,
+section ul > li + li {
+  margin-top: .75em;
 }
