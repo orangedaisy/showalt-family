@@ -1,6 +1,7 @@
 /* vars */
 :root {
   --dark: #30475e;
+  --dark-opacity: #30475eaa;
   --primary: #3fc1c9;
   --accent: #fc5185;
   --white: #ececec;
@@ -84,6 +85,27 @@ a:visited {
 /* My recipe styles */
 html {
   background-color: var(--primary);
+  background-image:
+    repeating-linear-gradient(
+      to right,
+      transparent,
+      transparent 4rem,
+      var(--dark-opacity) 4rem,
+      var(--dark-opacity) 4.25rem
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 4rem,
+      var(--dark-opacity) 4rem,
+      var(--dark-opacity) 4.25rem
+    ),
+    linear-gradient(
+      135deg,
+      var(--primary),
+      var(--white),
+      var(--accent)
+    );
   color: var(--dark);
 }
 
