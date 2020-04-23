@@ -144,7 +144,6 @@ h2 {
 h1 {
   font-size: clamp(2rem, 5vw, 5rem);
   font-weight: 900;
-  text-shadow: .05em .05em 0 var(--primary);
 }
 
 h2 {
