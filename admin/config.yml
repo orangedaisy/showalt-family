@@ -24,12 +24,7 @@ collections:
         delete: false
         file: "_data/recipe_toc.json"
         fields:
-          - label: "Recipe Tag"
-            name: "recipe_tag"
-            widget: "list"
-            allow_add: true
-            fields:
-              - {label: "Tag", name: "tag", widget: "string"}
+          - {label: "Recipe Tags", name: "recipe_tags", widget: "list", allow_add: true, field: {label: "Tag", name: "tag", widget: "string"}}
   - name: "recipes"
     label: "Recipes"
     folder: "recipes"
