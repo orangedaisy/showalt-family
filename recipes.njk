@@ -25,7 +25,7 @@
         <p>We like cooking. Here is what we cook. The end.</p>
       </section>
       <section>
-        {%- for recipe_tag in recipe_toc -%}
+        {%- for recipe_tag in recipe_toc.recipe_tags -%}
           <h2>
             <a href="/recipes/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>
             <small>({{ collections[ recipe_tag ].length }})</small>

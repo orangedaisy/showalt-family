@@ -1,4 +1,6 @@
-[
-  "Breakfast",
-  "Bread"
-]
+{
+  "recipe_tags": [
+    "Breakfast",
+    "Bread"
+  ]
+}
