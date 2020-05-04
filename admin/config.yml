@@ -16,16 +16,6 @@ collections:
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
       - {label: "Body", name: "body", widget: "markdown", required: true}
-  - name: "pages"
-    label: "Pages"
-    files:
-      - name: "recipe_toc"
-        label: "Recipe Index"
-        delete: false
-        file: "recipes.njk"
-        slug: "{{ slug }}"
-        fields:
-          - {label: "Featured Tags", name: "recipe_tags", widget: "list", field: {label: "Tag", name: "recipe_tag", widget: "string"}, required: true}
   - name: "recipes"
     label: "Recipes"
     folder: "recipes"
