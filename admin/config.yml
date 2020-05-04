@@ -25,7 +25,7 @@ collections:
         file: "recipes.njk"
         slug: "{{ slug }}"
         fields:
-          - {label: "Featured Tags", name: "recipe_tags", widget: "list", required: true}
+          - {label: "Featured Tags", name: "recipe_tags", widget: "list", field: {label: "Tag", name: "recipe_tag", widget: "string"}, required: true}
   - name: "recipes"
     label: "Recipes"
     folder: "recipes"
