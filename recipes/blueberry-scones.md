@@ -16,7 +16,7 @@ ingredients:
   - 1/2 cup sour cream, cold
   - 1/2 cup milk
   - 1 tsp vanilla extract
-  - 1 1/2 cups bluberries
+  - 1 1/2 cups blueberries
   - coarse sugar for topping
 method: >-
   1. Preheat oven to 425F with the rack in the middle. 
