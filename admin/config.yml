@@ -19,8 +19,8 @@ collections:
   - name: "site_data"
     label: "Site Data"
     files:
-      - label: "recipe_index"
-        name: "Recipe Index"
+      - name: "recipe_index"
+        label: "Recipe Index"
         delete: false
         file: "_data/recipe_toc.json"
         fields:
