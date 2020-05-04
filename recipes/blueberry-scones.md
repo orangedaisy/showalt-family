@@ -2,10 +2,10 @@
 layout: layouts/recipe.njk
 title: Blueberry Scones
 tags:
-  - breakfast
-  - blueberries
-  - fruit
-  - scone
+  - Breakfast
+  - Blueberries
+  - Fruit
+  - Scone
 ingredients:
   - 8 Tbsp unsalted butter, frozen + 2 Tbsp melted
   - 2 1/2 cups all purpose flour
