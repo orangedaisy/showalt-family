@@ -1,7 +1,7 @@
 ---
 recipe_tags:
-  - bread
-  - breakfast
+  - Bread
+  - Breakfast
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -31,8 +31,9 @@ recipe_tags:
       </section>
       <section>
         {%- for recipe_tag in recipe_tags -%}
-          <h2 style="text-transform: capitalize">
-            <a href="/recipes/{{ recipe_tag }}">{{ recipe_tag }}</a>
+          <h2>
+            <a href="/recipes/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>
+            <small>({{ collections[ recipe_tag ].length }})</small>
           </h2>
         {%- endfor -%}
       </section>
