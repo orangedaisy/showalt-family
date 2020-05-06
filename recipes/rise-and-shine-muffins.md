@@ -21,4 +21,5 @@ method: >-
   3. While your sausage browns, mix together your pancake mix, milk, butter and egg until barely combined. Add sausage and cheese and stir to combine.
 
   4. Portion your muffins and bake for 20-25 minutes.
+source: Adapted from [Rock House Farms](https://www.instagram.com/rockhousefarmsllc/).
 ---
