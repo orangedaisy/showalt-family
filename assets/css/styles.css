@@ -1,31 +1,46 @@
 :root {
   /* base colors */
-  --c-1: #f9f7f7;
-  --c-2: #dbe2ef;
-  --c-3: #3f72af;
-  --c-4: #112d4e;
-  --c-5: #9cb9db;
+  --c-1: #303960;
+  --c-2: #ea9a96;
+  --c-3: #f8b24f;
+  --c-4: #e5e5e5;
+  --c-5: #1c2239;
+  --c-6: #3d497a;
+
+  /* font stacks */
+  --f-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  --f-serif: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  --f-brand: "Krona One", var(--f-sans);
+
+  /* widths */
+  --w-content: 48rem;
+
+  /* paddings */
+  --p-block: clamp(1.5rem, 5vw, 3rem) 1rem;
 
   /* light (default) theme */
-  --c-background-container: var(--c-1);
-  --c-background-body: var(--c-2);
-  --c-text-headings: var(--c-3);
-  --c-text-body: var(--c-4);
-  --c-text-link: var(--c-3);
-  --c-timeline-line: var(--c-5);
-  --c-timeline-bullet: var(--c-3);
+  --c-body-background: var(--c-4);
+  --c-site-header-background: var(--c-1);
+  --c-site-header-title: var(--c-2);
+  --c-site-header-link: var(--c-3);
+  --c-page-header-background: var(--c-2);
+  --c-page-header-title: var(--c-6);
+  --c-page-header-color: var(--c-1);
+  --c-text-headings: var(--c-6);
+  --c-text-body: var(--c-1);
+  --c-text-link: var(--c-6);
 }
 
 /* dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-background-container: var(--c-3);
-    --c-background-body: var(--c-4);
-    --c-text-headings: var(--c-5);
-    --c-text-body: var(--c-1);
-    --c-text-link: var(--c-2);
-    --c-timeline-line: var(--c-5);
-    --c-timeline-bullet: var(--c-2);
+    --c-body-background: var(--c-1);
+    --c-page-header-background: var(--c-5);
+    --c-page-header-title: var(--c-2);
+    --c-page-header-color: var(--c-4);
+    --c-text-headings: var(--c-3);
+    --c-text-body: var(--c-4);
+    --c-text-link: var(--c-3);
   }
 }
 
@@ -37,10 +52,9 @@
 }
 
 html {
-  background-color: var(--c-background-body);
+  background-color: var(--c-body-background);
   color: var(--c-text-body);
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-  font-size: 18px;
+  font-family: var(--f-serif);
 }
 
 /* Remove default padding */
@@ -75,7 +89,11 @@ body {
 
 a {
   color: var(--c-text-link);
+  font-family: var(--f-brand);
+  font-weight: normal;
   text-decoration-skip-ink: auto;
+  text-decoration-thickness: .125rem;
+  text-underline-offset: .25rem;
   transition:
     color 200ms ease-out,
     opacity 200ms ease-out;
@@ -87,6 +105,10 @@ a:hover {
 
 a:active {
   color: var(--c-text-headings);
+}
+
+p a {
+  font-size: .8em;
 }
 
 /* Make images easier to work with */
@@ -110,6 +132,10 @@ h4, h4 a,
 h5, h5 a,
 h6, h6 a {
   color: var(--c-text-headings);
+  font-family: var(--f-brand);
+  font-weight: normal;
+  line-height: 1.25;
+  margin-bottom: .75em;
 }
 
 h1 small,
@@ -121,71 +147,86 @@ h6 small {
   opacity: .75;
 }
 
-main {
-  margin: 2em auto;
-  max-width: 65ch;
-  padding: 0 .5em;
+p + p {
+  margin-top: 1em;
 }
 
-/* Journal entry styles */
+/* Objects */
+.o-constrain-content {
+  margin: 0 auto;
+  max-width: var(--w-content);
+}
+
+.o-block {
+  padding: var(--p-block);
+}
+
+/* Components */
+.c-site-header {
+  background-color: var(--c-site-header-background);
+}
+
+.c-site-header h1 {
+  color: var(--c-site-header-title);
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.c-site-header ul {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: .5rem -.5rem 0 -1rem;
+  padding-left: 0;
+}
+
+.c-site-header a {
+  color: var(--c-site-header-link);
+  display: block;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+
+.c-site-header a:not(:is(:hover, :focus, .current)) {
+  text-decoration-color: transparent;
+}
+
+/* Page Header styles */
+main > header {
+  background-color: var(--c-page-header-background);
+  color: var(--c-page-header-color);
+}
+
+main > header > div > *:first-child {
+  margin-top: 0;
+}
+
+main > header > div > *:last-child {
+  margin-bottom: 0;
+}
+
+main > header > div > h2 {
+  color: var(--c-page-header-title);
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+main > header > div > p {
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+}
+
+/* Journal styles */
 main ol {
   list-style: none;
-  margin-top: 3.375em;
 }
 
-main ol > li {
-  /* slide the entries over to make room for the timeline */
-  margin-left: 3em;
-  position: relative;
-}
-
-/* let's add a little timeline to the left side of the entries */
-/* some of these numbers will feel a little "magic," but that's how she goes */
-main ol > li::before {
-  background-color: var(--c-timeline-line);
-  content: '';
-  position: absolute;
-  left: -2.5em;
-  width: .75em;
-}
-
-main ol > li:not(:last-child)::before {
-  top: 0;
-  bottom: 0;
-}
-
-/*
- * we need to do some special styling for the last (first) entry so that the
- * timeline appears to start in the correct location
- */
-main ol > li:last-child::before {
-  height: 10em;
-  top: -5em;
-}
-
-main ol > li + li {
-  padding-top: 3.375em;
-}
-
-article > header {
-  position: relative;
-}
-
-/* add a circle/bullet point next to the headline for each journal entry */
-article > header::before {
-  background-color: var(--c-timeline-bullet);
-  border-radius: 50%;
-  content: '';
-  display: block;
-  height: 2.5em;
-  position: absolute;
-  top: -.5em;
-  left: -3.35em;
-  width: 2.5em;
+article,
+footer {
+  font-size: clamp(1rem, 3vw, 1.25rem);
 }
 
 article > header h3 {
-  font-size: 1.5em;
   line-height: 1;
 }
 
@@ -193,24 +234,6 @@ article > header h3 a {
   text-decoration: none;
 }
 
-article > div {
-  background-color: var(--c-background-container);
-  border-radius: .25em;
-  box-shadow: .063em .25em .875em rgba(25, 45, 69, .125);
-  margin-top: 1em;
-  padding: 1em;
-}
-
-article > div > * + * {
-  margin-top: 1em;
-}
-
 footer {
-  margin: 2.25em 0;
-  opacity: .85;
   text-align: center;
-}
-
-footer > * + * {
-  margin-top: 1em;
 }
