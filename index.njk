@@ -1,36 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: "layouts/default.njk"
+---
 
-{% include "head.njk" %}
+<main id="journal">
+  <h1>Showalter Family COVID-19 Journal</h1>
 
-<body>
-  <main id="journal">
-    <h1>Showalter Family COVID-19 Journal</h1>
+  {% include "postlist.njk" %}
+</main>
+<footer>
+  <p>
+    This is the beginning.
+    <a href="#journal">Jump to the latest post &uarr;</a>
+  </p>
 
-    {% include "postlist.njk" %}
-  </main>
-  <footer>
-    <p>
-      This is the beginning.
-      <a href="#journal">Jump to the latest post &uarr;</a>
-    </p>
-
-    <p>
-      <a href="https://www.bshow.co/">Bobby's Blog &nearr;</a>
-      &bull;
-      <a href="https://www.github.com/orangedaisy/showalt-family/">GitHub &nearr;</a>
-    </p>
-  </footer>
-  <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-</body>
-</html>
+  <p>
+    <a href="https://www.bshow.co/">Bobby's Blog &nearr;</a>
+    &bull;
+    <a href="https://www.github.com/orangedaisy/showalt-family/">GitHub &nearr;</a>
+  </p>
+</footer>
