@@ -223,7 +223,7 @@ main ol {
 
 article,
 footer {
-  font-size: clamp(1rem, 3vw, 1.25rem);
+  font-size: 1.25rem;
 }
 
 article > header h3 {
