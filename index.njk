@@ -3,7 +3,7 @@ layout: "layouts/default.njk"
 title: "COVID-19 Journal"
 ---
 
-<main id="journal">
+<main id="latest">
   <header class="o-block">
     <div class="o-constrain-content">
       <h2>{{ title }}</h2>
@@ -13,16 +13,16 @@ title: "COVID-19 Journal"
         protect our family from the ongoing coronavirus pandemic, and how we
         are coping with life in quarantine.
       </p>
-      <p><a href="#footer">Start at the beginning &darr;</a></p>
+      <p><a href="#beginning">Start at the beginning &darr;</a></p>
     </div>
   </header>
 
   {% include "postlist.njk" %}
 </main>
-<footer id="footer" class="o-constrain-content o-block">
+<footer id="beginning" class="o-constrain-content o-block">
   <p>
     This is the beginning.
-    <a href="#journal">Jump to the latest post &uarr;</a>
+    <a href="#latest">Jump to the latest post &uarr;</a>
   </p>
 
   <p>
