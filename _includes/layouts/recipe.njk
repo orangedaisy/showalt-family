@@ -1,53 +1,39 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>
-    {{ title }} | Showalter Recipes
-  </title>
-  <link rel="stylesheet" href="/assets/css/recipes.css">
-</head>
-<body>
-  <nav>
-    <a href="/recipes/" title="Return to recipe list">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H6M12 5l-7 7 7 7"/></svg>
-    </a>
-  </nav>
+---
+layout: "layouts/default.njk"
+---
 
-  <article>
-    <header>
-      <h1>{{ title }}</h1>
-      <ul>
+<main>
+  <header class="o-block">
+    <div class="o-constrain-content">
+      <h2>{{ title }}</h2>
+      <ul class="c-flex-list">
       {%- for tag in tags -%}
         <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
       {%- endfor -%}
       </ul>
-    </header>
-
-    <div>
-      <section>
-        <h2>Ingredients</h2>
-        <ul>
-        {%- for ingredient in ingredients -%}
-          <li>{{ ingredient }}</li>
-        {%- endfor -%}
-        </ul>
-      </section>
-
-      <section>
-        <h2>Method</h2>
-        {{ method | markdownify | safe }}
-      </section>
-
-      {%- if source -%}
-        <section>
-          <h2>Source</h2>
-          {{ source | markdownify | safe }}
-        </section>
-      {%- endif -%}
     </div>
-  </article>
+  </header>
 
-</body>
-</html>
+  <div class="o-block">
+    <section class="o-constrain-content">
+      <h3>Ingredients</h3>
+      <ul>
+      {%- for ingredient in ingredients -%}
+        <li>{{ ingredient }}</li>
+      {%- endfor -%}
+      </ul>
+    </section>
+
+    <section class="o-constrain-content">
+      <h3>Method</h3>
+      {{ method | markdownify | safe }}
+    </section>
+
+    {%- if source -%}
+      <section class="o-constrain-content">
+        <h3>Source</h3>
+        {{ source | markdownify | safe }}
+      </section>
+    {%- endif -%}
+  </div>
+</main>

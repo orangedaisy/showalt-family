@@ -162,6 +162,21 @@ p + p {
 }
 
 /* Components */
+.c-flex-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: .5rem -.5rem 0 -1rem;
+  padding-left: 0;
+}
+
+.c-flex-list a {
+  display: block;
+  margin: 0 0.5rem;
+  padding: 0.5rem;
+}
+
 .c-site-header {
   background-color: var(--c-site-header-background);
 }
@@ -173,20 +188,8 @@ p + p {
   margin-bottom: 0;
 }
 
-.c-site-header ul {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  list-style: none;
-  margin: .5rem -.5rem 0 -1rem;
-  padding-left: 0;
-}
-
 .c-site-header a {
   color: var(--c-site-header-link);
-  display: block;
-  margin: 0 0.5rem;
-  padding: 0.5rem;
 }
 
 .c-site-header a:not(:is(:hover, :focus, .current)) {
@@ -217,7 +220,7 @@ main > header > div > p {
 }
 
 /* Journal styles */
-main ol {
+main > ol {
   list-style: none;
 }
 
@@ -236,4 +239,19 @@ article > header h3 a {
 
 footer {
   text-align: center;
+}
+
+/* Recipe styles */
+section {
+  font-size: 1.25rem;
+}
+
+section > ol,
+section > ul {
+  margin: 0 0 2em 1em;
+  padding: 0;
+}
+
+section li + li {
+  margin-top: .75em;
 }
