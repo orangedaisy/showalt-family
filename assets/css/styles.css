@@ -1,3 +1,15 @@
+/* custom font */
+/* krona-one-regular - latin */
+@font-face {
+  font-display: swap;
+  font-family: 'Krona One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Krona One'), local('KronaOne-Regular'),
+       url('../fonts/krona-one-v8-latin-regular.woff2') format('woff2'),
+       url('../fonts/krona-one-v8-latin-regular.woff') format('woff');
+}
+
 /* default primitives */
 :root {
   /* base colors */
