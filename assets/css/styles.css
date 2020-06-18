@@ -57,8 +57,9 @@ html.recipe {
 /* dark theme */
 @media (prefers-color-scheme: dark) {
   :root {
-    --c-body-background: var(--c-1);
-    --c-page-header-background: var(--c-5);
+    --c-body-background: var(--c-5);
+    --c-site-header-background: var(--c-5);
+    --c-page-header-background: var(--c-1);
     --c-page-header-title: var(--c-2);
     --c-page-header-color: var(--c-4);
     --c-text-headings: var(--c-3);
