@@ -2,24 +2,22 @@
 layout: "layouts/default.njk"
 ---
 
-<main>
-  <header class="o-block">
-    <div class="o-constrain-content">
-      <h2>Showalter Recipes</h2>
-      <p>Welcome to our digital family cookbook! These are tried and true recipes
-      we have tested and loved, saved for us to easily reference and to share
-      with others.</p>
-    </div>
-  </header>
-
-  <div class="o-block">
-    <section class="o-constrain-content">
-      {%- for recipe_tag in recipe_toc.recipe_tags -%}
-        <h3>
-          <a href="/recipes/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>
-          <small>({{ collections[ recipe_tag ].length }})</small>
-        </h3>
-      {%- endfor -%}
-    </section>
+<header class="o-block">
+  <div class="o-constrain-content">
+    <h2>Showalter Recipes</h2>
+    <p>Welcome to our digital family cookbook! These are tried and true recipes
+    we have tested and loved, saved for us to easily reference and to share
+    with others.</p>
   </div>
-</main>
+</header>
+
+<div class="o-block">
+  <section class="o-constrain-content">
+    {%- for recipe_tag in recipe_toc.recipe_tags -%}
+      <h3>
+        <a href="/recipes/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>
+        <small>({{ collections[ recipe_tag ].length }})</small>
+      </h3>
+    {%- endfor -%}
+  </section>
+</div>

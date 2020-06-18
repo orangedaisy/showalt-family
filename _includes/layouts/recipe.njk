@@ -2,38 +2,36 @@
 layout: "layouts/default.njk"
 ---
 
-<main>
-  <header class="o-block">
-    <div class="o-constrain-content">
-      <h2>{{ title }}</h2>
-      <ul class="c-flex-list">
-      {%- for tag in tags -%}
-        <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
-      {%- endfor -%}
-      </ul>
-    </div>
-  </header>
-
-  <div class="o-block">
-    <section class="o-constrain-content">
-      <h3>Ingredients</h3>
-      <ul>
-      {%- for ingredient in ingredients -%}
-        <li>{{ ingredient }}</li>
-      {%- endfor -%}
-      </ul>
-    </section>
-
-    <section class="o-constrain-content">
-      <h3>Method</h3>
-      {{ method | markdownify | safe }}
-    </section>
-
-    {%- if source -%}
-      <section class="o-constrain-content">
-        <h3>Source</h3>
-        {{ source | markdownify | safe }}
-      </section>
-    {%- endif -%}
+<header class="o-block">
+  <div class="o-constrain-content">
+    <h2>{{ title }}</h2>
+    <ul class="c-flex-list">
+    {%- for tag in tags -%}
+      <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
+    {%- endfor -%}
+    </ul>
   </div>
-</main>
+</header>
+
+<div class="o-block">
+  <section class="o-constrain-content">
+    <h3>Ingredients</h3>
+    <ul>
+    {%- for ingredient in ingredients -%}
+      <li>{{ ingredient }}</li>
+    {%- endfor -%}
+    </ul>
+  </section>
+
+  <section class="o-constrain-content">
+    <h3>Method</h3>
+    {{ method | markdownify | safe }}
+  </section>
+
+  {%- if source -%}
+    <section class="o-constrain-content">
+      <h3>Source</h3>
+      {{ source | markdownify | safe }}
+    </section>
+  {%- endif -%}
+</div>

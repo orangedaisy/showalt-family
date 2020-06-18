@@ -4,10 +4,9 @@
 {% include "head.njk" %}
 
 <body>
-
   {% include "header.njk" %}
 
-  {{ content | safe }}
+  <main>{{ content | safe }}</main>
 
   <script>
     if (window.netlifyIdentity) {
