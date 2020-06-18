@@ -1,3 +1,4 @@
+/* default primitives */
 :root {
   /* base colors */
   --c-1: #303960;
@@ -17,8 +18,18 @@
 
   /* paddings */
   --p-block: clamp(1.5rem, 5vw, 3rem) 1rem;
+}
 
-  /* light (default) theme */
+/* special recipe theme */
+html.recipe {
+  --c-1: #30475e;
+  --c-2: #fc5185;
+  --c-3: #3fc1c9;
+  --c-4: #ececec;
+}
+
+/* light (default) theme */
+:root{
   --c-body-background: var(--c-4);
   --c-site-header-background: var(--c-1);
   --c-site-header-title: var(--c-2);
