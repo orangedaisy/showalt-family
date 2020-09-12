@@ -267,3 +267,8 @@ section > ul {
 section li + li {
   margin-top: .75em;
 }
+
+/* Homepage styles */
+.c-homepage > div > * + * {
+  margin-bottom: 1.5rem;
+}

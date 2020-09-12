@@ -1,0 +1,26 @@
+---
+layout: "layouts/default.njk"
+title: "COVID-19 Journal"
+---
+
+<header id="latest" class="o-block">
+  <div class="o-constrain-content">
+    <h2>{{ title }}</h2>
+    <p>
+      Welcome to our <a href="https://en.wikipedia.org/wiki/2019%E2%80%9320_coronavirus_pandemic">COVID-19 &nearr;</a>
+      quarantine journal. We will use this journal to track our efforts to
+      protect our family from the ongoing coronavirus pandemic, and how we
+      are coping with life in quarantine.
+    </p>
+    <p><a href="#beginning">Start at the beginning &darr;</a></p>
+  </div>
+</header>
+
+{% include "postlist.njk" %}
+
+<footer id="beginning" class="o-constrain-content o-block">
+  <p>
+    This is the beginning.
+    <a href="#latest">Jump to the latest post &uarr;</a>
+  </p>
+</footer>

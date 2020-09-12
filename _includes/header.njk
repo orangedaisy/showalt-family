@@ -2,7 +2,8 @@
   <nav class="o-constrain-content">
     <h1>Showalter Family</h1>
     <ul class="c-flex-list">
-      <li><a{% if page.url == "/" %} class="current"{% endif %} href="/">COVID-19 Journal</a></li>
+      <li><a{% if page.url == "/" %} class="current"{% endif %} href="/">Home</a></li>
+      <li><a{% if 'covid' in page.url %} class="current"{% endif %} href="/covid-19/">COVID-19 Journal</a></li>
       <li><a{% if 'recipes' in page.url %} class="current"{% endif %} href="/recipes/">Recipes</a></li>
     </ul>
   </nav>
