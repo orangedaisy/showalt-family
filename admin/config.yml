@@ -36,3 +36,15 @@ collections:
       - {label: "Ingredients", name: "ingredients", widget: "list", allow_add: true, field: {label: "Ingredient", name: "single_ingredient", widget: "string"}, required: true}
       - {label: "Method", name: "method", widget: "markdown", required: true}
       - {label: "Source", name: "source", widget: "markdown", required: false}
+  - name: "crochet_patterns"
+    label: "Crochet Patterns"
+    folder: "crochet_patterns"
+    create: true
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/crochet.njk"}
+      - {label: "Name", name: "name", widget: "string", required: true}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, field: {label: "Tag", name: "tag", widget: "string"}, required: true}
+      - {label: "Hook size", name: "hook", widget: "string", required: true}
+      - {label: "Yarn weight", name: "yarn", widget: "string", required: true}
+      - {label: "Instructions", name: "instructions", widget: "markdown", required: true}
+      - {label: "Source", name: "source", widget: "markdown", required: false}

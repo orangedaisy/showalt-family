@@ -1,0 +1,29 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - post
+permalink: /crochet-patterns/{{ tag }}/
+layout: "layouts/default.njk"
+---
+
+<header class="o-block">
+  <div class="o-constrain-content">
+    <h2>{{ tag }} crochet patterns</h2>
+  </div>
+</header>
+
+<div class="o-block">
+  <section class="o-constrain-content">
+    <ol>
+      {%- set taglist = collections[ tag ] -%}
+      {%- for crochet_pattern in taglist | reverse -%}
+        <li>
+          <a href="{{ crochet_pattern.url | url }}">{{ crochet_pattern.data.title }}</a>
+        </li>
+      {%- endfor -%}
+    </ol>
+  </section>
+</div>

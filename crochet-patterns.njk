@@ -1,0 +1,20 @@
+---
+layout: "layouts/default.njk"
+---
+
+<header class="o-block">
+  <div class="o-constrain-content">
+    <h2>Stephanie's Crochet Patterns</h2>
+  </div>
+</header>
+
+<div class="o-block">
+  <section class="o-constrain-content">
+    {%- for crochet_tag in crochet_toc.crochet_tags -%}
+      <h3>
+        <a href="/crochet-patterns/{{ crochet_tag.toLowerCase() }}/">{{ crochet_tag }}</a>
+        <small>({{ collections[ crochet_tag ].length }})</small>
+      </h3>
+    {%- endfor -%}
+  </section>
+</div>
