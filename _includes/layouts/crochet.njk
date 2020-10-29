@@ -7,7 +7,9 @@ layout: "layouts/default.njk"
     <h2>{{ name }}</h2>
     <ul class="c-flex-list">
     {%- for tag in tags -%}
-      <li><a href="/crochet-patterns/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
+      {%- if tag != 'crochet' -%}
+        <li><a href="/crochet-patterns/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
+      {%- endif -%}
     {%- endfor -%}
     </ul>
   </div>
