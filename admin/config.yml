@@ -44,7 +44,9 @@ collections:
       - {label: "Source", name: "source", widget: "markdown", required: false}
   - name: "crochet_patterns"
     label: "Crochet Patterns"
+    label_singular: "Crochet Pattern"
     folder: "crochet_patterns"
+    identifier_field: "name"
     create: true
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/crochet.njk"}
