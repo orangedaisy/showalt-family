@@ -7,9 +7,7 @@ layout: "layouts/default.njk"
     <h2>{{ title }}</h2>
     <ul class="c-flex-list">
     {%- for tag in tags -%}
-      {%- if tag != 'recipe' -%}
-        <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
-      {%- endif -%}
+      <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
     {%- endfor -%}
     </ul>
   </div>
