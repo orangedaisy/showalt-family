@@ -45,7 +45,7 @@ collections:
   - name: "crochet_patterns"
     label: "Crochet Patterns"
     label_singular: "Crochet Pattern"
-    folder: "crochet_patterns"
+    folder: "crochet-patterns"
     identifier_field: "name"
     create: true
     fields:
