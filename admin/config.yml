@@ -25,6 +25,12 @@ collections:
         file: "_data/recipe_toc.json"
         fields:
           - {label: "Recipe Tags", name: "recipe_tags", widget: "list", allow_add: true, field: {label: "Tag", name: "tag", widget: "string"}}
+      - name: "crochet_index"
+        label: "Crochet Patterns Index"
+        delete: false
+        file: "_data/crochet_toc.json"
+        fields:
+          - {label: "Crochet Tags", name: "crochet_tags", widget: "list", allow_add: true, field: {label: "Tag", name: "tag", widget: "string"}}
   - name: "recipes"
     label: "Recipes"
     folder: "recipes"
