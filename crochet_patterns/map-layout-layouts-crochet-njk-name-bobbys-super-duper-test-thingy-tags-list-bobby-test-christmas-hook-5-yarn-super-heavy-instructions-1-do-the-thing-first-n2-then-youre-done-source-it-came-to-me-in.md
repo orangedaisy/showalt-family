@@ -1,6 +1,6 @@
 ---
 layout: layouts/crochet.njk
-name: Bobby's super duper test thingy
+name: Bobby's super duper test thingy my dude
 tags:
   - Bobby
   - Test
