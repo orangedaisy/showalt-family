@@ -4,12 +4,12 @@ title: Sandwich Bread
 tags:
   - Bread
 ingredients:
-  - 174 g water
-  - 125 g milk
-  - 9 g yeast
-  - 440 g bread flour
-  - 8 g sea salt
-  - 21 g sugar
+  - 174 g water (3/4 cup)
+  - 125 g milk (1/2 cup)
+  - 9 g yeast (1 packet)
+  - 440 g bread flour (3 cups)
+  - 8 g sea salt (1.5 tsp)
+  - 21 g sugar (1 Tbsp)
   - 3 Tbsp butter, softened
 method: >-
   1. Combine mlik and water. Heat to 98 degrees. Add in yeast to bloom for 10
