@@ -27,7 +27,7 @@ method: >-
 
   3. Combine bread flour, sea salt, and sugar in the bowl of your stand mixer. Add in your yeast mixture, tangzhong, and 1 whole egg. Start your mixer of low (speed 2-4) with the dough hook and allow to mix until all ingredients are combined and no dry flour remains in the bottom of the bowl.
 
-  4. Add butter 1 Tbsp at a time of softened butter. Mix until butter is fully incorporate. Allow the dough to continue kneading for another 5-7 minutes.
+  4. Add butter 1 Tbsp at a time of softened butter. Mix until butter is fully incorporated. Allow the dough to continue kneading for another 5-7 minutes.
 
   5. Place dough on an unfloured (or very lightly flour if dough is too sticky) surface and form a tight ball.
 
