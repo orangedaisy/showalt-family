@@ -198,11 +198,14 @@ h6 {
 }
 
 .c-site-header h1 {
+  line-height: 1;
   margin-bottom: .5em;
 }
 
 .c-site-header h1 small {
+  font-size: .7em;
   font-weight: 400;
+  white-space: nowrap;
 }
 
 .c-site-nav ul {
