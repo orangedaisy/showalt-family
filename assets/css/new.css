@@ -238,3 +238,20 @@ main {
 .has-flow > * + * {
   margin-top: 1em;
 }
+
+hr {
+  background-color: var(--c-foreground--headings);
+  border: 0;
+  height: 1px;
+  margin: calc(var(--s-p-default) * 1.5) 0;
+  opacity: .5;
+}
+
+.covid-journal li + li {
+  margin-top: calc(var(--s-p-default) * 1.5);
+}
+
+.covid-journal a {
+  color: inherit;
+  text-decoration: none;
+}

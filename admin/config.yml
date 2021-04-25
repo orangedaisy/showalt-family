@@ -7,15 +7,6 @@ display_url: https://www.showalter.family
 media_folder: "assets/images"
 
 collections:
-  - name: "journal"
-    label: "Journal"
-    folder: "posts"
-    create: true
-    slug: "{{fields.date}}"
-    fields:
-      - {label: "Title", name: "title", widget: "string", required: true}
-      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
-      - {label: "Body", name: "body", widget: "markdown", required: true}
   - name: "site_data"
     label: "Site Data"
     files:
