@@ -1,0 +1,237 @@
+/**
+ * # BESPOKE SERIF FONT
+ * https://www.fontshare.com/fonts/bespoke-serif
+ */
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bespoke Serif';
+  font-style: normal;
+  font-weight: 300 800;
+  src: local('Bespoke Serif Variable'), local('BespokeSerif-Variable'),
+       url('../fonts/BespokeSerif-Variable.woff2') format('woff2'),
+       url('../fonts/BespokeSerif-Variable.woff') format('woff');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Bespoke Serif';
+  font-style: italic;
+  font-weight: 300 800;
+  src: local('Bespoke Serif Variable Italic'), local('BespokeSerif-VariableItalic'),
+       url('../fonts/BespokeSerif-VariableItalic.woff2') format('woff2'),
+       url('../fonts/BespokeSerif-VariableItalic.woff') format('woff');
+}
+
+/**
+ * # CUSTOM PROPERTIES
+ */
+
+:root {
+  /* colors */
+  /* h/t: https://tailwindcss.com/docs/customizing-colors */
+  --c-white: #f9fafb;
+  --c-light-gray: #e5e7eb;
+  --c-dark-gray: #374151;
+  --c-basically-black: #1f2937;
+
+  --c-background--page: var(--c-light-gray);
+  --c-background--content: var(--c-white);
+  --c-foreground--text: var(--c-basically-black);
+  --c-foreground--headings: var(--c-dark-gray);
+  --c-anchors--default: #2563eb;
+  --c-anchors--hover: #1e40af;
+  --c-anchors--active: #b91c1c;
+  --c-anchors--visited: rebeccapurple;
+
+  /* fonts */
+  --f-serif: 'Bespoke Serif', serif;
+
+  /* spacing */
+  --s-p-default: 1.5rem;
+
+  /* widths */
+  --w-body: 90ch;
+}
+
+/**
+ * ## DARK MODE
+ */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-background--page: var(--c-basically-black);
+    --c-background--content: var(--c-dark-gray);
+    --c-foreground--text: var(--c-white);
+    --c-foreground--headings: var(--c-light-gray);
+    --c-anchors--default: #93c5fd;
+    --c-anchors--hover: #bfdbfe;
+    --c-anchors--active: #fca5a5;
+    --c-anchors--visited: #c4b5fd;
+  }
+}
+
+/**
+ * # RESET
+ * h/t: https://piccalil.li/blog/a-modern-css-reset
+ */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+/* Set core root defaults */
+html {
+  background-color: var(--c-background--page);
+  color: var(--c-foreground--text);
+  font-family: var(--f-serif);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  margin: 0 auto;
+  max-width: var(--w-body);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  color: var(--c-anchors--default);
+  text-decoration-skip-ink: auto;
+}
+
+a:hover,
+a:focus {
+  color: var(--c-anchors--hover);
+}
+
+a:active {
+  color: var(--c-anchors--active);
+}
+
+a:visited {
+  color: var(--c-anchors--visited);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/**
+ * # STYLES
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c-foreground--headings);
+  font-weight: 650;
+}
+
+.c-site-header {
+  margin: 0 auto;
+  padding: var(--s-p-default);
+}
+
+.c-site-header h1 {
+  margin-bottom: .5em;
+}
+
+.c-site-header h1 small {
+  font-weight: 400;
+}
+
+.c-site-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -.5em;
+}
+
+.c-site-nav li {
+  margin: .5em;
+}
+
+.c-site-nav a:not(:hover, :active) {
+  color: var(--c-foreground--text);
+}
+
+.c-site-nav .current {
+  font-style: italic;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+main {
+  background-color: var(--c-background--content);
+  border-radius: .5em;
+  margin-bottom: var(--s-p-default);
+  padding: var(--s-p-default);
+}
+
+.has-flow > * + * {
+  margin-top: 1em;
+}

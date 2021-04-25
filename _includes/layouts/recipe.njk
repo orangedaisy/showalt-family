@@ -2,10 +2,10 @@
 layout: "layouts/default.njk"
 ---
 
-<header class="o-block">
-  <div class="o-constrain-content">
+<header>
+  <div>
     <h2>{{ title }}</h2>
-    <ul class="c-flex-list">
+    <ul>
     {%- for tag in tags -%}
       <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
     {%- endfor -%}
@@ -13,8 +13,8 @@ layout: "layouts/default.njk"
   </div>
 </header>
 
-<div class="o-block">
-  <section class="o-constrain-content">
+<div>
+  <section>
     <h3>Ingredients</h3>
     <ul>
     {%- for ingredient in ingredients -%}
@@ -23,13 +23,13 @@ layout: "layouts/default.njk"
     </ul>
   </section>
 
-  <section class="o-constrain-content">
+  <section>
     <h3>Method</h3>
     {{ method | markdownify | safe }}
   </section>
 
   {%- if source -%}
-    <section class="o-constrain-content">
+    <section>
       <h3>Source</h3>
       {{ source | markdownify | safe }}
     </section>

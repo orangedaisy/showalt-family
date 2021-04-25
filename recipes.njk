@@ -2,8 +2,8 @@
 layout: "layouts/default.njk"
 ---
 
-<header class="o-block">
-  <div class="o-constrain-content">
+<header>
+  <div class="has-flow">
     <h2>Showalter Recipes</h2>
     <p>Welcome to our digital family cookbook! These are tried and true recipes
     we have tested and loved, saved for us to easily reference and to share
@@ -11,8 +11,8 @@ layout: "layouts/default.njk"
   </div>
 </header>
 
-<div class="o-block">
-  <section class="o-constrain-content">
+<div style="margin-top: 1.5em;">
+  <section class="has-flow">
     {%- for recipe_tag in recipe_toc.recipe_tags -%}
       <h3>
         <a href="/recipes/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>

@@ -1,7 +1,10 @@
-<header class="c-site-header o-block">
-  <nav class="o-constrain-content">
-    <h1>Showalter Family</h1>
-    <ul class="c-flex-list">
+<header class="c-site-header">
+  <nav class="c-site-nav">
+    <h1>
+      Showalter Family
+      <small><em>Est. 2013</em></small>
+    </h1>
+    <ul role="list">
       <li><a{% if page.url == "/" %} class="current"{% endif %} href="/">Home</a></li>
       <li><a{% if 'covid' in page.url %} class="current"{% endif %} href="/covid-19/">COVID-19 Journal</a></li>
       <li><a{% if 'recipes' in page.url %} class="current"{% endif %} href="/recipes/">Recipes</a></li>

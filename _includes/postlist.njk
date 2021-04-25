@@ -1,12 +1,12 @@
-<ol reversed>
+<ol class="has-flow" reversed>
   {% for post in collections.post | reverse %}
     {%- set date = post.date | readableDate -%}
-    <li class="o-block">
-      <article id="{{ date | slug }}" class="o-constrain-content">
+    <li>
+      <article id="{{ date | slug }}" class="has-flow">
         <header>
           <h3><a href="#{{ date | slug }}">{{ date }}</a></h3>
         </header>
-        <div>
+        <div class="has-flow">
           {{ post.templateContent | safe }}
         </div>
       </article>
