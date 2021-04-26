@@ -7,7 +7,9 @@ layout: "layouts/default.njk"
     <h2>{{ title }}</h2>
     <ul>
     {%- for tag in tags -%}
+      {%- if tag != 'recipe' -%}
       <li><a href="/recipes/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
+      {%- endif -%}
     {%- endfor -%}
     </ul>
   </div>
