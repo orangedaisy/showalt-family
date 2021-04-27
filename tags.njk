@@ -1,0 +1,21 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+permalink: /tags/{{ tag }}/
+layout: "layouts/default.njk"
+---
+
+<header>
+  <h2><em>{{ tag }}</em> entries</h2>
+</header>
+
+<ol>
+  {%- set taglist = collections[ tag ] -%}
+  {%- for entry in taglist | reverse -%}
+    <li>
+      <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
+    </li>
+  {%- endfor -%}
+</ol>

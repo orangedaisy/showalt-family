@@ -15,7 +15,7 @@ layout: "layouts/default.njk"
   <section class="has-flow">
     {%- for recipe_tag in recipe_toc.recipe_tags -%}
       <h3>
-        <a href="/recipes/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>
+        <a href="/tags/{{ recipe_tag.toLowerCase() }}/">{{ recipe_tag }}</a>
         <small>({{ collections[ recipe_tag ].length }})</small>
       </h3>
     {%- endfor -%}
