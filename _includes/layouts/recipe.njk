@@ -5,12 +5,12 @@ layout: "layouts/default.njk"
 <header>
   <div>
     <h2>{{ title }}</h2>
-    <ul>
-    {%- for tag in tags -%}
-      {%- if tag != 'recipe' -%}
-      <li><a href="/tags/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
-      {%- endif -%}
-    {%- endfor -%}
+    <ul class="c-tags-list" role="list" aria-label="Tags">
+      {%- for tag in tags -%}
+        {%- if tag != 'recipe' -%}
+        <li><a href="/tags/{{ tag.toLowerCase() }}/">{{ tag }}</a></li>
+        {%- endif -%}
+      {%- endfor -%}
     </ul>
   </div>
 </header>
