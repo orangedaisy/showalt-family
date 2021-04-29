@@ -11,11 +11,20 @@ layout: "layouts/default.njk"
   <h2><em>{{ tag }}</em> entries</h2>
 </header>
 
-<ol>
+<ol class="c-entry-list" role="list">
   {%- set taglist = collections[ tag ] -%}
   {%- for entry in taglist | reverse -%}
     <li>
-      <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
+      {%- for tag in entry.data.tags -%}
+        <span class="c-entry-list__tag">
+          {%- if tag == 'garden' -%}Garden{%- endif -%}
+          {%- if tag == 'recipe' -%}Recipe{%- endif -%}
+        </span>
+        <a href="{{ entry.url | url }}">
+          {%- if tag == 'garden' -%}{{ entry.data.date | readableDate }}{%- endif -%}
+          {%- if tag == 'recipe' -%}{{ entry.data.title }}{%- endif -%}
+        </a>
+      {%- endfor -%}
     </li>
   {%- endfor -%}
 </ol>

@@ -267,3 +267,14 @@ hr {
 .c-tags-list li {
   margin: var(--spacing);
 }
+
+.c-entry-list > *:not(:last-child) {
+  margin: calc(var(--s-p-default) / 2) 0;
+}
+
+.c-entry-list__tag {
+  font-size: .75em;
+  font-style: italic;
+  display: block;
+  text-transform: uppercase;
+}
