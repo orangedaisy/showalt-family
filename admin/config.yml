@@ -27,3 +27,15 @@ collections:
       - {label: "Ingredients", name: "ingredients", widget: "list", allow_add: true, field: {label: "Ingredient", name: "single_ingredient", widget: "string"}, required: true}
       - {label: "Method", name: "method", widget: "markdown", required: true}
       - {label: "Source", name: "source", widget: "markdown", required: false}
+  - name: "garden"
+    label: "Garden Updates"
+    label_singular: "Garden Update"
+    folder: "garden"
+    create: true
+    slug: "{{fields.date}}"
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "layouts/garden.njk"}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", required: true}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, field: {label: "Tag", name: "tag", widget: "string"}, required: false}
+      - {label: "Body", name: "body", widget: "markdown", required: true}
