@@ -268,8 +268,8 @@ hr {
   margin: var(--spacing);
 }
 
-.c-entry-list > *:not(:last-child) {
-  margin: calc(var(--s-p-default) / 2) 0;
+.c-entry-list > * {
+  margin-top: calc(var(--s-p-default) / 2);
 }
 
 .c-entry-list__tag {
