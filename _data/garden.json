@@ -11,6 +11,18 @@
       "expected_harvest": "2021-06-14",
       "plant": "Blueberry",
       "variety": "Premier"
+    },
+    {
+      "planted_on": "2021-03-21",
+      "expected_harvest": "2021-06-01",
+      "plant": "Strawberry",
+      "variety": "Ozark Beauty"
+    },
+    {
+      "planted_on": "2021-03-21",
+      "expected_harvest": "2021-06-01",
+      "plant": "Strawberry",
+      "variety": "Quinault"
     }
   ]
 }
