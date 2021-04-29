@@ -26,12 +26,15 @@ collections:
             widget: "list"
             allow_add: true
             fields:
-              - label: "Plant"
-                name: "plant"
+              - label: "Name"
+                name: "name"
                 widget: "string"
               - label: "Variety"
                 name: "variety"
                 widget: "string"
+              - label: "Quantity"
+                name: "quantity"
+                widget: "number"
               - label: "Planted on"
                 name: "planted_on"
                 widget: "datetime"

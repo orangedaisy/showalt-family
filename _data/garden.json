@@ -3,26 +3,30 @@
     {
       "planted_on": "2021-03-08",
       "expected_harvest": "2021-06-14",
-      "plant": "Blueberry",
-      "variety": "Brightwell"
+      "name": "Blueberry",
+      "variety": "Brightwell",
+      "quantity": "1"
     },
     {
       "planted_on": "2021-03-08",
       "expected_harvest": "2021-06-14",
-      "plant": "Blueberry",
-      "variety": "Premier"
+      "name": "Blueberry",
+      "variety": "Premier",
+      "quantity": "1"
     },
     {
       "planted_on": "2021-03-21",
       "expected_harvest": "2021-06-01",
-      "plant": "Strawberry",
-      "variety": "Ozark Beauty"
+      "name": "Strawberry",
+      "variety": "Ozark Beauty",
+      "quantity": "4"
     },
     {
       "planted_on": "2021-03-21",
       "expected_harvest": "2021-06-01",
-      "plant": "Strawberry",
-      "variety": "Quinault"
+      "name": "Strawberry",
+      "variety": "Quinault",
+      "quantity": "4"
     }
   ]
 }
