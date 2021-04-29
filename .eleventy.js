@@ -11,7 +11,7 @@ module.exports = function(eleventyConfig) {
 
     // convert dates to readable format
     eleventyConfig.addFilter("readableDate", dateObj => {
-        return dateFormat(dateObj, "fullDate");
+        return dateFormat(dateObj, "longDate");
     });
 
     // markdown filter since 11ty doesn't have one for some reason

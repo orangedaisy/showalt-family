@@ -4,7 +4,7 @@ layout: "layouts/default.njk"
 
 <header>
   <div>
-    <h2>{{ title }}</h2>
+    <h2>{{ date | readableDate }}</h2>
     <ul>
     {%- for tag in tags -%}
       {%- if tag != 'garden' -%}
@@ -16,5 +16,5 @@ layout: "layouts/default.njk"
 </header>
 
 <div class="has-flow">
-  {{ body | markdownify | safe }}
+  {{ content | safe }}
 </div>

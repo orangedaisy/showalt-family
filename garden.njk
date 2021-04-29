@@ -11,9 +11,9 @@ layout: "layouts/default.njk"
 
 <div style="margin-top: 1.5em;">
   <ol class="has-flow">
-    {%- for entry in collections[ garden ] | reverse -%}
+    {%- for entry in collections.garden | reverse -%}
       <li>
-        <a href="{{ entry.url | url }}">{{ entry.data.title }}</a>
+        <a href="{{ entry.url | url }}">{{ entry.data.date | readableDate }}</a>
       </li>
     {%- endfor -%}
   </ol>
