@@ -1,0 +1,45 @@
+---
+layout: "layouts/default.njk"
+permalink: "/garden/about/"
+---
+
+<header class="has-flow">
+  <h2>All about our Garden</h2>
+</header>
+
+<div role="region" aria-labelledby="planted_label" tabindex="0">
+  <table>
+    <caption id="planted_label">What we're growing</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Variety</th>
+        <th style="--text-alignment: center">Quantity</th>
+        <th>Planted on</th>
+        <th style="--text-alignment: center">Days until harvest</th>
+      </tr>
+    </thead>
+    <tbody>
+      {%- for plant in garden.plants -%}
+        <tr>
+          <td><a href="/tags/{{ plant.name.toLowerCase() }}/" title="View all posts tagged {{ plant.name }}">{{ plant.name }}</a></td>
+          <td>{{ plant.variety }}</td>
+          <td style="--text-alignment: center">{{ plant.quantity }}</td>
+          <td>{{ plant.planted_on | readableDate }}</td>
+          <td style="--text-alignment: center" class="js-days-until-harvest">{{ plant.expected_harvest }}</td>
+        </tr>
+      {%- endfor -%}
+    </tbody>
+  </table>
+</div>
+
+<script>
+  function harvestCountdown(el) {
+    const estHarvestDate = el.textContent;
+    const timeRemaining = Date.parse(estHarvestDate) - Date.parse(new Date());
+    const daysRemaining = Math.floor(timeRemaining / (1000*60*60*24));
+    el.textContent = daysRemaining;
+  }
+
+  document.querySelectorAll('.js-days-until-harvest').forEach(cell => harvestCountdown(cell));
+</script>

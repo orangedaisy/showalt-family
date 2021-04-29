@@ -10,6 +10,7 @@ layout: "layouts/default.njk"
 </header>
 
 <ol class="c-entry-list" role="list">
+  <li><a href="./about/">What's in our garden &rarr;</a></li>
   {%- for entry in collections.garden | reverse -%}
     <li>
       <a href="{{ entry.url | url }}">{{ entry.data.date | readableDate }}</a>
