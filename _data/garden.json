@@ -16,17 +16,157 @@
     },
     {
       "planted_on": "2021-03-21",
-      "expected_harvest": "2021-06-01",
+      "expected_harvest": "2021-05-07",
       "name": "Strawberry",
       "variety": "Ozark Beauty",
       "quantity": "4"
     },
     {
       "planted_on": "2021-03-21",
-      "expected_harvest": "2021-06-01",
+      "expected_harvest": "2021-05-17",
       "name": "Strawberry",
       "variety": "Quinault",
       "quantity": "4"
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-11",
+      "name": "Tomato",
+      "variety": "Goliath",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-07-09",
+      "name": "Tomato",
+      "variety": "Red Brandywine",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-26",
+      "name": "Tomato",
+      "variety": "Beefmaster",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-08",
+      "name": "Tomato",
+      "variety": "Grape TAMI G Hybrid",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-21",
+      "name": "Tomato",
+      "variety": "Yellow Cherry Sun Sugar Hybrid",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-23",
+      "name": "Tomato",
+      "variety": "Roma",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-03",
+      "expected_harvest": "2021-07-12",
+      "name": "Onion",
+      "variety": "Georgia Sweet",
+      "quantity": 8
+    },
+    {
+      "planted_on": "2021-04-03",
+      "expected_harvest": "2021-07-12",
+      "name": "Onion",
+      "variety": "Sweet Red",
+      "quantity": 6
+    },
+    {
+      "planted_on": "2021-03-21",
+      "expected_harvest": "2021-06-29",
+      "name": "Onion",
+      "variety": "Candy",
+      "quantity": 8
+    },
+    {
+      "planted_on": "2021-03-21",
+      "expected_harvest": "2021-06-29",
+      "name": "Onion",
+      "variety": "Texas Sweet White Graney Hybrid",
+      "quantity": 8
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-14",
+      "name": "Pepper",
+      "variety": "Baron Red Sweet",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-14",
+      "name": "Pepper",
+      "variety": "Orange Blaze Sweet",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-23",
+      "name": "Pepper",
+      "variety": "Yellow Sweet Bell",
+      "quantity": 2
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-21",
+      "name": "Pepper",
+      "variety": "Green Sweet Bell",
+      "quantity": 7
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-06-21",
+      "name": "Pepper",
+      "variety": "Poblano Ancho Mild",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-15",
+      "expected_harvest": "2021-06-26",
+      "name": "Pepper",
+      "variety": "Jalapeno",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-05-07",
+      "name": "Herb",
+      "variety": "Sweet Genovese Basil",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-05-07",
+      "name": "Herb",
+      "variety": "Bouquet Dill",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-05-07",
+      "name": "Herb",
+      "variety": "Peppermint",
+      "quantity": 1
+    },
+    {
+      "planted_on": "2021-04-07",
+      "expected_harvest": "2021-04-07",
+      "name": "Herb",
+      "variety": "Greek Oregano",
+      "quantity": 1
     }
   ]
 }
