@@ -279,43 +279,41 @@ hr {
   text-transform: uppercase;
 }
 
-[role="region"][aria-labelledby][tabindex] {
-  margin-top: var(--s-p-default);
-  overflow: auto;
+.c-garden-cards {
+  --item-spacing: calc(var(--s-p-default) / 2);
+  display: flex;
+  flex-wrap: wrap;
+  margin: calc(var(--item-spacing) * -1);
 }
 
-[role="region"][aria-labelledby][tabindex]:focus {
-  outline: .125em solid var(--c-foreground--headings);
+.c-garden-cards > * {
+  flex: 1 0 15em;
+  margin: var(--item-spacing);
 }
 
-table {
-  border-collapse: collapse;
+.c-garden-cards__item {
+  border: .125em solid var(--c-background--page);
+  border-radius: .35em;
+  display: flex;
+  flex-direction: column;
+  padding: var(--item-spacing);
 }
 
-table > caption {
-  font-size: 1.25em;
+.c-garden-cards__item > header > h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.c-garden-cards__item > header > h3 {
   font-weight: 600;
-  text-align: left;
 }
 
-table thead tr {
+.c-garden-cards__item > img {
   background-color: var(--c-background--page);
-}
-
-table thead th,
-table tbody td {
-  --text-alignment: left;
-  --vert-alignment: middle;
-  font-variant-numeric: tabular-nums;
-  padding: .25em .5em;
-  text-align: var(--text-alignment);
-  vertical-align: var(--vert-alignment);
-}
-
-table thead th {
-  --vert-alignment: bottom;
-}
-
-table tbody td {
-  --vert-alignment: top;
+  border-radius: .25em;
+  flex-grow: 1;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }

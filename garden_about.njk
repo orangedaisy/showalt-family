@@ -5,33 +5,31 @@ permalink: "/garden/about/"
 
 <header class="has-flow">
   <h2>All about our Garden</h2>
+  <p>We currently have {{ garden.plants.length }} plants in the ground.</p>
 </header>
 
-<div role="region" aria-labelledby="planted_label" tabindex="0">
-  <table>
-    <caption id="planted_label">What we're growing</caption>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Variety</th>
-        <th style="--text-alignment: center">Quantity</th>
-        <th>Planted on</th>
-        <th style="--text-alignment: center">Days until harvest</th>
-      </tr>
-    </thead>
-    <tbody>
-      {%- for plant in garden.plants -%}
-        <tr>
-          <td><a href="/tags/{{ plant.name.toLowerCase() }}/" title="View all posts tagged {{ plant.name }}">{{ plant.name }}</a></td>
-          <td>{{ plant.variety }}</td>
-          <td style="--text-alignment: center">{{ plant.quantity }}</td>
-          <td>{{ plant.planted_on | readableDate }}</td>
-          <td style="--text-alignment: center" class="js-days-until-harvest">{{ plant.expected_harvest }}</td>
-        </tr>
-      {%- endfor -%}
-    </tbody>
-  </table>
-</div>
+<h3 style="margin: 1em 0 .5em;">What we're growing</h3>
+<div class="c-garden-cards">
+{%- for plant in garden.plants -%}
+  <article class="c-garden-cards__item has-flow">
+    <header>
+      <h2><a href="/tags/{{ plant.name.toLowerCase() }}/" title="View all posts tagged {{ plant.name }}">{{ plant.name }}</a></h2>
+      <h3>{{ plant.quantity }} {{ plant.variety }}</h3>
+    </header>
+    {%- if plant.image -%}
+      <img src="{{ plant.image }}?nf_resize=smartcrop&w=400&h=400" alt="" height="240" width="240">
+    {%- else -%}
+      <img src="https://source.unsplash.com/400x400/?garden" alt="" height="240" width="240">
+    {%- endif -%}
+    <footer>
+      <p>Planted on {{ plant.planted_on | readableDate }}</p>
+      <p>
+        <noscript>Estimated harvest date: {{ plant.expected_harvest }}</noscript>
+        <span class="js-days-until-harvest">{{ plant.expected_harvest }}</span> days until harvest
+      </p>
+    </footer>
+  </article>
+{%- endfor -%}
 
 <script>
   function harvestCountdown(el) {

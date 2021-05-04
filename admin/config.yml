@@ -35,6 +35,10 @@ collections:
               - label: "Quantity"
                 name: "quantity"
                 widget: "number"
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                allow_multiple: false
               - label: "Planted on"
                 name: "planted_on"
                 widget: "datetime"
