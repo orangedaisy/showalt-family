@@ -19,7 +19,8 @@
       "expected_harvest": "2021-05-07",
       "name": "Strawberry",
       "variety": "Ozark Beauty",
-      "quantity": "4"
+      "quantity": "4",
+      "image": "/assets/images/img_0051.jpg"
     },
     {
       "planted_on": "2021-03-21",
