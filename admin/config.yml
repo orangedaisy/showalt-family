@@ -39,6 +39,7 @@ collections:
                 name: "image"
                 widget: "image"
                 allow_multiple: false
+                required: false
               - label: "Planted on"
                 name: "planted_on"
                 widget: "datetime"
