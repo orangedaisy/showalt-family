@@ -168,6 +168,13 @@
       "name": "Herb",
       "variety": "Greek Oregano",
       "quantity": 1
+    },
+    {
+      "planted_on": "2021-05-10",
+      "expected_harvest": "2021-07-24",
+      "name": "Flower",
+      "variety": "Sunflower",
+      "quantity": 14
     }
   ]
 }
